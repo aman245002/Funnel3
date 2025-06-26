@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@plugin 'tailwindcss-animate';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* TailwindV4 theme and design tokens */
+@theme {
+  /* Fonts */
+  --font-sans:
+    ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+
+  /* FitZone Fitness Brand Colors */
+  --color-fitness-orange: 22 100% 60%;
+  --color-fitness-dark: 220 13% 11%;
+  --color-fitness-gray: 220 13% 18%;
+  --color-fitness-light: 220 13% 96%;
+  --color-fitness-accent: 147 100% 45%;
+
+  --color-input: hsl(220 13% 91%);
+  --color-border: hsl(220 13% 91%);
+  --color-ring: hsl(22 100% 60%);
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(220 13% 11%);
+
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(220 13% 11%);
+
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(220 13% 11%);
+
+  --color-primary: hsl(22 100% 60%);
+  --color-primary-foreground: hsl(0 0% 100%);
+
+  --color-secondary: hsl(220 13% 18%);
+  --color-secondary-foreground: hsl(0 0% 100%);
+
+  --color-muted: hsl(220 13% 96%);
+  --color-muted-foreground: hsl(220 13% 46%);
+
+  --color-accent: hsl(147 100% 45%);
+  --color-accent-foreground: hsl(0 0% 100%);
+
+  --color-destructive: hsl(0 84% 60%);
+  --color-destructive-foreground: hsl(210 40% 98%);
+
+  --color-border: hsl(214.3 31.8% 91.4%);
+  --color-input: hsl(214.3 31.8% 91.4%);
+  --color-ring: hsl(222.2 84% 4.9%);
+
+  --color-sidebar-background: hsl(0 0% 98%);
+
+  --color-sidebar-foreground: hsl(240 5.3% 26.1%);
+
+  --color-sidebar-accent: hsl(240 4.8% 95.9%);
+
+  --color-sidebar-accent-foreground: hsl(240 5.9% 10%);
+
+  --color-sidebar-border: hsl(220 13% 91%);
+
+  --color-sidebar-ring: hsl(217.2 91.2% 59.8%);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
